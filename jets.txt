@@ -1,0 +1,8 @@
+P, Boeing 737-700, 520, 3461, 89.1
+P, Airbus A220-100, 541, 3912, 81
+C, Airbus A300 Beluga, 537, 1727, 201
+C, Antonov An-225 Mriya, 530, 9600, 250
+F, General Dynamics F16 Falcon, 1572, 339, 14.6
+F, Eurofighter Typhoon, 1550, 863, 98
+B, Embraer EMB-500 Phenom 100, 470, 1356, 4.5
+B, Embraer Lineage 1000, 623, 5300, 49.9
