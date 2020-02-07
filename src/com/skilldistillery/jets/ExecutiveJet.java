@@ -7,7 +7,7 @@ public class ExecutiveJet extends Jet implements LeisureJet {
 	}
 
 	public void fly() {
-		System.out.println(this.toString());
+		System.out.println(this.toString() + " Max Flight Time: " + this.getMaxFlightTime());
 	}
 	
 	public void popBubbly() {

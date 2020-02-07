@@ -7,7 +7,7 @@ public class CargoJet extends Jet implements CargoCarrier {
 	}
 	
 	public void fly() {
-		System.out.println(this.toString());
+		System.out.println(this.toString() + " Max Flight Time: " + this.getMaxFlightTime());
 	}
 	
 	public void loadCargo() {

@@ -7,7 +7,7 @@ public class PassengerJet extends Jet implements CommercialJet {
 	}
 	
 	public void fly() {
-		System.out.println(this.toString());
+		System.out.println(this.toString() + " Max Flight Time: " + this.getMaxFlightTime());
 	}
 	
 	public void loadPeople() {

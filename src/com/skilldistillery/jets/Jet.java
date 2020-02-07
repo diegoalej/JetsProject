@@ -10,20 +10,15 @@ public abstract class Jet {
 	
 	
 	//M E T H O D S
-	
 	public abstract void fly();
 	
-	
-
-
 	public Jet(String model, double speed, double range, double price) {
 		this.model = model;
 		this.speed = speed;
 		this.range = range;
 		this.price = price;
-		this.maxFlightTime = speed / range;
+		this.maxFlightTime = range / speed;
 	}
-
 
 	@Override
 	public String toString() {
@@ -37,14 +32,16 @@ public abstract class Jet {
 		builder.append(range);
 		builder.append(" miles, price: $");
 		builder.append(price);
-		builder.append(", maxFlightTime: ");
-		builder.append(maxFlightTime);
-		builder.append(" hours");
 		return builder.toString();
 	}
 
-
-
+	public double getMaxFlightTime() {
+		return maxFlightTime;
+	}
+		
+	public void setMaxFlightTime(double maxFlightTime) {
+		this.maxFlightTime = maxFlightTime;
+	}
 
 	public String getModel() {
 		return model;

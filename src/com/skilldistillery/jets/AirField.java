@@ -9,11 +9,22 @@ import java.util.List;
 
 public class AirField {
 	// F I E L D S
-	private List<Jet> allJets = new ArrayList();
+	private List<Jet> allJets = new ArrayList<>();
 
 	// M E T H O D S
+	public void flyAllJets() {
+		for (Jet jet : allJets) {
+			jet.fly();
+		}
+	}
+	
+	public void listFleet() {
+		System.out.println("Here is a list of all jets on the AirField");
+		for (Jet jet : allJets) {
+			System.out.println(jet);
+		}
+	}
 	public void populateList() {
-//		allJets = new ArrayList<Jet>();
 		try (BufferedReader bufIn = new BufferedReader(new FileReader("jets.txt"))) {
 			String line;
 			while ((line = bufIn.readLine()) != null) {
@@ -41,13 +52,9 @@ public class AirField {
 					break;
 				}
 				default:
-					System.out.println("no dice");
-
+					System.out.println("Incorrect choice");
 				}
-
 			}
-			System.out.println(allJets);
-			System.out.println(allJets.size());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
