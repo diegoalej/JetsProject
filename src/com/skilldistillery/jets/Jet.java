@@ -32,6 +32,7 @@ public abstract class Jet {
 		builder.append(range);
 		builder.append(" miles, price: $");
 		builder.append(price);
+		builder.append(" million");
 		return builder.toString();
 	}
 

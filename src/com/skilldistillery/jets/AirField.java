@@ -12,6 +12,28 @@ public class AirField {
 	private List<Jet> allJets = new ArrayList<>();
 
 	// M E T H O D S
+	public void longestRange() {
+		System.out.println("The jet with the longest range is: ");
+		Jet longestRange = allJets.get(0);
+		for (int i = 1; i < allJets.size(); i++) {
+			if(allJets.get(i).getRange() >  longestRange.getRange()) {
+				longestRange = allJets.get(i);
+			}
+		}
+		System.out.println(longestRange);
+	}
+
+	public void viewFastest() {
+		System.out.println("The fastest jet is: ");
+		Jet fastestJet = allJets.get(0);
+		for (int i = 1; i < allJets.size(); i++) {
+			if(allJets.get(i).getSpeed() >  fastestJet.getSpeed()) {
+				fastestJet = allJets.get(i);
+			}
+		}
+		System.out.println(fastestJet);
+	}
+	
 	public void flyAllJets() {
 		for (Jet jet : allJets) {
 			jet.fly();

@@ -44,14 +44,14 @@ public class JetsApplication {
 					newField.flyAllJets();
 					break;
 				}
-//				case 3 : {
-//					newField.listFleet();
-//					break;
-//				}
-//				case 4 : {
-//					newField.listFleet();
-//					break;
-//				}
+				case 3 : {
+					newField.viewFastest();
+					break;
+				}
+				case 4 : {
+					newField.longestRange();
+					break;
+				}
 //				case 5 : {
 //					newField.listFleet();
 //					break;
