@@ -7,7 +7,7 @@ public class FighterJet extends Jet implements CombatJet{
 	}
 	
 	public void fly() {
-		System.out.println(this.toString() + " Max Flight Time: " + this.getMaxFlightTime());
+		System.out.println(this.toString() + " Max Flight Time: " + this.getMaxFlightTime() + "hours");
 	}
 	
 	public void readyOrdinance() {

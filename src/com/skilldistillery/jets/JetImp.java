@@ -7,6 +7,6 @@ public class JetImp extends Jet{
 	}
 
 		public void fly() {
-			System.out.println(this.toString());
+			System.out.println(this.toString() + " Max Flight Time: " + this.getMaxFlightTime() + "hours");
 		}
 }

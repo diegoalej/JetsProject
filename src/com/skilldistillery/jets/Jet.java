@@ -14,10 +14,10 @@ public abstract class Jet {
 	
 	public Jet(String model, double speed, double range, double price) {
 		this.model = model;
-		this.speed = speed;
-		this.range = range;
-		this.price = price;
-		this.maxFlightTime = range / speed;
+		this.speed = roundTwoDecimals(speed);
+		this.range = roundTwoDecimals(range);
+		this.price = roundTwoDecimals(price);
+		this.maxFlightTime = roundTwoDecimals(range / speed);
 	}
 
 	@Override
@@ -81,6 +81,13 @@ public abstract class Jet {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	
+	// Method rounds numbers to the nearest tenth
+	public double roundTwoDecimals(double roundedNum) {
+		roundedNum = Math.round(roundedNum * 10);
+		roundedNum /= 10;
+		return roundedNum;
 	}
 	
 }
