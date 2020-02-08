@@ -21,6 +21,7 @@ public class JetsApplication {
 		System.out.println("Welcome to the Jets App");
 		int userChoice = 0;
 		while (userChoice != 11) {
+			System.out.println();
 			System.out.println("Enter an integer to choose from the menu below: ");
 			System.out.println("1: List fleet");
 			System.out.println("2: Fly all jets");
@@ -30,8 +31,8 @@ public class JetsApplication {
 			System.out.println("6: Load passengers for commercial flights");
 			System.out.println("7: Load cargo for carrier jets");
 			System.out.println("8: Ready ordinance for fighter jets");
-			System.out.println("9: Add a jet to AirField");
-			System.out.println("10: Remove a jet from Airfield");
+			System.out.println("9: Add a jet to the AirField");
+			System.out.println("10: Remove a jet from the Airfield");
 			System.out.print("11: Quit\n> ");
 			try {
 				userChoice = kb.nextInt();
@@ -68,14 +69,14 @@ public class JetsApplication {
 					newField.callFighterJets();
 					break;
 				}
-//				case 9 : {
-//					newField.listFleet();
-//					break;
-//				}
-//				case 10 : {
-//					newField.listFleet();
-//					break;
-//				}
+				case 9 : {
+					newField.addNewJet(kb);
+					break;
+				}
+				case 10 : {
+					newField.removeJet(kb);
+					break;
+				}
 				case 11 : {
 					break;
 				}
