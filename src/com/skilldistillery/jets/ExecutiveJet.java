@@ -11,11 +11,12 @@ public class ExecutiveJet extends Jet implements LeisureJet {
 	}
 	
 	public void popBubbly() {
-		System.out.println("Drinks all around!");
+		System.out.println("Drinks all around aboard the " + this.getModel());
+		this.kickBack();
 	}
 	
 	public void kickBack() {
-		System.out.println("Lean back and we will be there in no time");
+		System.out.println("Lean back and we will be there in no time!");
 	}
 		
 }

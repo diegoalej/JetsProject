@@ -11,7 +11,7 @@ public class CargoJet extends Jet implements CargoCarrier {
 	}
 	
 	public void loadCargo() {
-		System.out.println("Loaded and ready to carry cargo through the sky!");
+		System.out.println(this.getModel() + " loaded and ready to carry cargo through the sky!");
 	}
 
 }

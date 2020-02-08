@@ -11,7 +11,7 @@ public class PassengerJet extends Jet implements CommercialJet {
 	}
 	
 	public void loadPeople() {
-		System.out.println("All passengers are boarded and ready for takeoff");
+		System.out.println("All passengers have boarded and are ready for takeoff for the " + this.getModel());
 	}
 	
 	public void setFlightPlan() {

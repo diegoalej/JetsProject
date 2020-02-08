@@ -11,11 +11,11 @@ public class FighterJet extends Jet implements CombatJet{
 	}
 	
 	public void readyOrdinance() {
-		System.out.println("Guns and missles loaded and ready for combat!");
+		System.out.println("Guns and missles loaded and ready for the " + this.getModel());
 	}
 	
 	public void fight() {
-		System.out.println("I am locking in the enemy! Fire!");
+		System.out.println("Locking in the enemy! Fire!");
 	}
 
 }

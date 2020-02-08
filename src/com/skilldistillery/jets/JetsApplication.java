@@ -52,22 +52,22 @@ public class JetsApplication {
 					newField.longestRange();
 					break;
 				}
-//				case 5 : {
-//					newField.listFleet();
-//					break;
-//				}
-//				case 6 : {
-//					newField.listFleet();
-//					break;
-//				}
-//				case 7 : {
-//					newField.listFleet();
-//					break;
-//				}
-//				case 8 : {
-//					newField.listFleet();
-//					break;
-//				}
+				case 5 : {
+					newField.callExecJets();
+					break;
+				}
+				case 6 : {
+					newField.callCommercialJets();
+					break;
+				}
+				case 7 : {
+					newField.callCargoJets();
+					break;
+				}
+				case 8 : {
+					newField.callFighterJets();
+					break;
+				}
 //				case 9 : {
 //					newField.listFleet();
 //					break;
@@ -85,7 +85,7 @@ public class JetsApplication {
 				}	
 			} catch (Exception e) {
 				kb.nextLine();
-				System.out.println("Not an integer, please try again");
+				System.out.println("input is not an integer, please try again");
 			}
 		}
 		kb.close();

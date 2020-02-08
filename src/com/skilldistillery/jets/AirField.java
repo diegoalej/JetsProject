@@ -12,6 +12,41 @@ public class AirField {
 	private List<Jet> allJets = new ArrayList<>();
 
 	// M E T H O D S
+	public void callFighterJets() {
+		for (Jet jet : allJets) {
+			if(jet instanceof FighterJet) {
+				((FighterJet) jet).readyOrdinance();
+				((FighterJet)jet).fight();
+			}
+		}
+	}
+
+	public void callCargoJets() {
+		for (Jet jet : allJets) {
+			if(jet instanceof CargoJet) {
+				((CargoJet) jet).loadCargo();
+			}
+		}
+	}
+
+	public void callCommercialJets() {
+		for (Jet jet : allJets) {
+			if(jet instanceof PassengerJet) {
+				((PassengerJet) jet).loadPeople();
+				((PassengerJet) jet).setFlightPlan();
+			}
+		}
+	}
+
+	public void callExecJets() {
+		for (Jet jet : allJets) {
+			if(jet instanceof ExecutiveJet) {
+				((ExecutiveJet) jet).popBubbly();
+			}
+		}
+	}
+	
+	
 	public void longestRange() {
 		System.out.println("The jet with the longest range is: ");
 		Jet longestRange = allJets.get(0);
@@ -35,6 +70,7 @@ public class AirField {
 	}
 	
 	public void flyAllJets() {
+		System.out.println("All jets ready to take flight");
 		for (Jet jet : allJets) {
 			jet.fly();
 		}
