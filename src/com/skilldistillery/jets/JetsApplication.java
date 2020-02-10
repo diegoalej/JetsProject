@@ -67,6 +67,7 @@ public class JetsApplication {
 					break;
 				}
 				case 11 : {
+					System.out.println("Goodbye!");
 					break;
 				}
 				default:
