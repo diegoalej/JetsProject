@@ -6,19 +6,18 @@ public class JetsApplication {
 	private AirField newField = new AirField();
 
 	public static void main(String[] args) {
-
 		JetsApplication newApp = new JetsApplication();
 		newApp.launch();
 		newApp.displayMenu();
 	}
-
+	//Method is the first to run and populates the Airfield with Jets from text input
 	private void launch() {
 		newField.populateList();
 	}
-
+	//Method displays menu and captures user input to perform all different tasks
 	private void displayMenu() {
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Welcome to the Jets App");
+		System.out.println("Welcome to the Jets App!");
 		int userChoice = 0;
 		while (userChoice != 11) {
 			System.out.println();
@@ -37,44 +36,34 @@ public class JetsApplication {
 			try {
 				userChoice = kb.nextInt();
 				switch (userChoice) {
-				case 1 : {
-					newField.listFleet();
+				case 1 : { newField.listFleet();
 					break;
 				}
-				case 2 : {
-					newField.flyAllJets();
+				case 2 : { newField.flyAllJets();
 					break;
 				}
-				case 3 : {
-					newField.viewFastest();
+				case 3 : { newField.viewFastest();
 					break;
 				}
-				case 4 : {
-					newField.longestRange();
+				case 4 : { newField.longestRange();
 					break;
 				}
-				case 5 : {
-					newField.callExecJets();
+				case 5 : { newField.callExecJets();
 					break;
 				}
-				case 6 : {
-					newField.callCommercialJets();
+				case 6 : { newField.callCommercialJets();
 					break;
 				}
-				case 7 : {
-					newField.callCargoJets();
+				case 7 : { newField.callCargoJets();
 					break;
 				}
-				case 8 : {
-					newField.callFighterJets();
+				case 8 : { newField.callFighterJets();
 					break;
 				}
-				case 9 : {
-					newField.addNewJet(kb);
+				case 9 : { newField.addNewJet(kb);
 					break;
 				}
-				case 10 : {
-					newField.removeJet(kb);
+				case 10 : { newField.removeJet(kb);
 					break;
 				}
 				case 11 : {
@@ -82,7 +71,6 @@ public class JetsApplication {
 				}
 				default:
 					System.out.println("Integer out of menu bounds, please try again");
-//					throw new IllegalArgumentException("Unexpected value: " + userChoice);
 				}	
 			} catch (Exception e) {
 				kb.nextLine();

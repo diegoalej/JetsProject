@@ -13,6 +13,7 @@ public class AirField {
 	private List<Jet> allJets = new ArrayList<>();
 
 	// M E T H O D S
+	//Method displays the current list of jets and removes the user choice
 	public void removeJet(Scanner kb) {
 		System.out.println("Enter the integer that matches the jet below to remove");
 		for (int i = 0; i < allJets.size(); i++) {
@@ -34,7 +35,7 @@ public class AirField {
 			System.out.println("Not an integer, back to main menu");
 		}
 	}
-	
+	//Method gets input from user to add new jet and uses addJet() to create the Jet
 	public void addNewJet(Scanner kb) {
 		while (true) {
 		System.out.println();
@@ -114,7 +115,7 @@ public class AirField {
 			}
 		}
 	}
-
+	//Method calls Fighter jet's unique methods
 	public void callFighterJets() {
 		for (Jet jet : allJets) {
 			if (jet instanceof FighterJet) {
@@ -123,7 +124,7 @@ public class AirField {
 			}
 		}
 	}
-
+	//Method calls cargo jet's unique methods
 	public void callCargoJets() {
 		for (Jet jet : allJets) {
 			if (jet instanceof CargoJet) {
@@ -131,7 +132,7 @@ public class AirField {
 			}
 		}
 	}
-
+	//Method calls passenger jet's unique methods
 	public void callCommercialJets() {
 		for (Jet jet : allJets) {
 			if (jet instanceof PassengerJet) {
@@ -140,7 +141,7 @@ public class AirField {
 			}
 		}
 	}
-
+	//Method calls Executive jet's unique methods
 	public void callExecJets() {
 		for (Jet jet : allJets) {
 			if (jet instanceof ExecutiveJet) {
@@ -148,7 +149,7 @@ public class AirField {
 			}
 		}
 	}
-
+	//Method finds the Jet with longest range and prints it out
 	public void longestRange() {
 		System.out.println("The jet with the longest range is: ");
 		Jet longestRange = allJets.get(0);
@@ -159,7 +160,7 @@ public class AirField {
 		}
 		System.out.println(longestRange);
 	}
-
+	//Method finds the fastest Jet and prints it out
 	public void viewFastest() {
 		System.out.println("The fastest jet is: ");
 		Jet fastestJet = allJets.get(0);
@@ -170,21 +171,21 @@ public class AirField {
 		}
 		System.out.println(fastestJet);
 	}
-
+	//Method calls the fly() method for all jets in AirField
 	public void flyAllJets() {
 		System.out.println("All jets ready to take flight");
 		for (Jet jet : allJets) {
 			jet.fly();
 		}
 	}
-
+	//Method prints out all of jets in AirField
 	public void listFleet() {
 		System.out.println("Here is a list of all jets on the AirField");
 		for (Jet jet : allJets) {
 			System.out.println(jet);
 		}
 	}
-
+	//Method reads from file and calls addJet() passing in information read for each Jet
 	public void populateList() {
 		try (BufferedReader bufIn = new BufferedReader(new FileReader("jets.txt"))) {
 			String line;
@@ -204,7 +205,7 @@ public class AirField {
 			e.printStackTrace();
 		}
 	}
-
+	//Method gets all parameters needed for a Jet and creates it as necessary
 	public void addJet(String type, String model, double speed, double range, double price) {
 		switch (type) {
 		case "P": {
